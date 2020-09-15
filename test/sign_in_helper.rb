@@ -5,13 +5,13 @@ module SignInHelper
       user.provider,
       uid: user.uid,
       info: {
-        nickname,
+        nickname: user.name,
         image: user.image_url
       }
     )
 
     visit root_url
-    click_on "GirHubでログイン"
+    click_on "GitHubでログイン"
     @current_user = user
   end
 

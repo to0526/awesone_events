@@ -1,5 +1,8 @@
 ENV['RAILS_ENV'] ||= 'test'
 
+require "coveralls"
+Coveralls.wear!("rails")
+
 require "simplecov"
 SimpleCov.start "rails"
 

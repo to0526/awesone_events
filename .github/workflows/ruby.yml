@@ -28,6 +28,10 @@ jobs:
           stack-version: 7.6.0
           plugins: |
             analysis-kuromoji
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and test
         env:
           RAILS_ENV: test

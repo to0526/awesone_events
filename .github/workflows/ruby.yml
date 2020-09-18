@@ -39,3 +39,7 @@ jobs:
           bin/yarn install
           COVERALLS_REPO_TOKEN=fH9VzMxCiVnSdDGY0NSwtvwXYmlxnflg4 bin/rails test
           bin/rails test:system
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

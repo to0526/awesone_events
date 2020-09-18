@@ -356,7 +356,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   searchkick (~> 4.3.0)
   selenium-webdriver
-  simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)

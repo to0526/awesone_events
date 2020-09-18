@@ -28,10 +28,6 @@ jobs:
           stack-version: 7.6.0
           plugins: |
             analysis-kuromoji
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and test
         env:
           RAILS_ENV: test
@@ -41,5 +37,5 @@ jobs:
           bin/rails db:create
           bin/rails db:migrate
           bin/yarn install
-          COVERALLS_REPO_TOKEN=fH9VzMxCiVnSdDGY0NSwtvwXYmlxnflg4 bin/rails test
+          bin/rails test
           bin/rails test:system
